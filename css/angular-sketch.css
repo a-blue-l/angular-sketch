@@ -1,0 +1,36 @@
+body{
+	margin:0;
+	padding:0;
+}
+ul{
+	list-style: none;
+}
+*{
+	cursor: pointer;
+}
+.controls{
+	width: 20%;
+	min-height:700px;
+	background:black;
+	color:#fff;
+	font-size: 20px;
+	float: left;
+	line-height: 50px;
+}
+.drawregion{
+    width: 80%;
+    float: right;
+    text-align: center;
+    margin-top: 50px;
+}
+#canvas{
+	border:1px solid black;
+	margin: 0 auto;
+	cursor: pointer;
+}
+.active{
+	color:#ff6670;
+}
+.controls input{
+	width: 120px;
+}

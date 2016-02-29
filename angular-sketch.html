@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app = 'sketch'>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/angular-sketch.css">
+	<script src = './js/angular.js'></script>
+	<script src = './js/angular-sketch.js'></script>
+</head>
+<body ng-controller = 'sketchcontroller'>
+	<div class="controls">
+      <input ng-model = 'canvasWH.width' type="range" min = '400' max = '800' step = '1'> 
+      <input ng-model = 'canvasWH.height' type="range" min = '400' max = '800' step = '1'> 
+      <ul>
+      		<li ng-repeat = '(key,value) in frames' ng-click = 'tool(value)' ng-class = '{active:value==frame}'>
+      			<span>{{key}}</span>
+      		</li>
+      </ul>	
+      <hr>
+      <ul>
+      <li  ng-click = 'setStyle("fill")' ng-class = '{active:csState.style=="fill"}'>填充</li>
+      <input type="color" ng-model = 'csState.fillStyle'>
+      <li ng-click = 'setStyle("stroke")' ng-class = '{active:csState.style=="stroke"}'>画线</li>
+      <input type="color" ng-model = 'csState.strokeStyle'>
+      <li>线宽度 <input type="range" ng-model = 'csState.lineWidth' min = '1' max = '30' step = '1'></li>
+      </ul>
+      <a href="" ng-click = 'save($event)'>保存</a>
+      <div ng-click = 'newSketh()'>新建</div>
+      <div>后退</div>
+      <hr>
+	</div>
+	<div class="drawregion">
+		<canvas id = 'canvas' width = '{{canvasWH.width}}' height = '{{canvasWH.height}}'></canvas>
+	</div>
+</body>
+</html>
