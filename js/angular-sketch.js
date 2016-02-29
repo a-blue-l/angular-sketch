@@ -1,6 +1,6 @@
 var sketch = angular.module('sketch',[]);
 sketch.controller('sketchcontroller',['$scope',function($scope){
-	$scope.canvasWH = {width:600,height:600}
+	$scope.canvasWH = {width:1100,height:700}
 
 	var canvas = document.querySelector('#canvas');
 	var ctx = canvas.getContext('2d');
@@ -90,11 +90,11 @@ sketch.controller('sketchcontroller',['$scope',function($scope){
    	  current = null;
    }
    $scope.frames = {
-     直线:'line',
-     圆形:'arc',
-     矩形:'rect',
-     铅笔:'pencil',
-     橡皮:'none'
+     直线工具:'line',
+     椭圆工具:'arc',
+     矩形工具:'rect',
+     铅笔工具:'pencil',
+     橡皮工具:'none'
    }
    $scope.frame = 'line';
    $scope.tool = function(frame){
@@ -115,3 +115,4 @@ sketch.controller('sketchcontroller',['$scope',function($scope){
 
     
 }])
+

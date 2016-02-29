@@ -1,36 +1,77 @@
 body{
 	margin:0;
 	padding:0;
+	overflow: hidden;
 }
 ul{
 	list-style: none;
+	margin:0;
+	padding: 0; 
 }
 *{
 	cursor: pointer;
 }
+a{
+	text-decoration:none;
+	color:#ccc; 
+}
 .controls{
 	width: 20%;
-	min-height:700px;
-	background:black;
-	color:#fff;
+	min-height:800px;
+	color:#ccc;
 	font-size: 20px;
 	float: left;
 	line-height: 50px;
+    background:#333;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.title{
+	color:#fff;
+	font-size:30px;
+	font-weight: bold;
+	padding-left: 20px;
+	border-bottom:2px solid #fff  
+}
+li{
+	padding-left: 20px;
+	border-bottom: 1px solid #000;
+	transition: all 0.6s ease;
+}
+li:hover{
+	color:#ff2968;
+	padding-left:30px;
+}
+.gongju li:last-child{
+	border-bottom: 2px solid #fff;
+}
+.geshi li:last-child{
+	border-bottom: 2px solid #fff;
+}
+.qita li:last-child{
+	border-bottom: 2px solid #fff;
 }
 .drawregion{
     width: 80%;
     float: right;
     text-align: center;
-    margin-top: 50px;
+    background: url(../image/20140801201653_8UZAM.jpeg);
+    background-size: 1100px 700px;
 }
 #canvas{
 	border:1px solid black;
 	margin: 0 auto;
 	cursor: pointer;
+	border-radius: 10px;
 }
-.active{
+.controls .active{
 	color:#ff6670;
+	background:rgba(0,0,0,0.5);
+	padding-left: 30px;
 }
 .controls input{
 	width: 120px;
+}
+.h{
+	padding-left: 20px;
 }
