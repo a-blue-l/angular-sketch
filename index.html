@@ -16,8 +16,8 @@
 		</li>
       </ul>	
       <ul class="geshi">
-      <li  ng-click = 'setStyle("fill")' ng-class = '{active:csState.style=="fill"}'>内部填充 <input type="color" ng-model = 'csState.fillStyle'></li>  
-      <li ng-click = 'setStyle("stroke")' ng-class = '{active:csState.style=="stroke"}'>线性描边 <input type="color" ng-model = 'csState.strokeStyle'></li>
+      <li  ng-click = 'setStyle("fill")' ng-class = '{active:csState.style=="fill"}'>填充 <input type="color" ng-model = 'csState.fillStyle'></li>  
+      <li ng-click = 'setStyle("stroke")' ng-class = '{active:csState.style=="stroke"}'>线性 <input type="color" ng-model = 'csState.strokeStyle'></li>
       </ul>
           <div class="h">画笔尺寸 <input type="range" ng-model = 'csState.lineWidth' min = '1' max = '30' step = '1'></div> 
           <div class="h">画布宽度 <input ng-model = 'canvasWH.width' type="range" min = '400' max = '1000' step = '1'></div> 

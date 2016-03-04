@@ -27,7 +27,12 @@ sketch.controller('sketchcontroller',['$scope',function($scope){
 			}
 			ctx.beginPath();
 			ctx.arc(e.offsetX,e.offsetY,m,0,Math.PI*2)
-			ctx.stroke()
+			if($scope.csState.style=='fill'){
+				   ctx.fill();
+				}else{
+				   ctx.stroke();
+				}
+			
 		    }
           },
          rect : function(e){
